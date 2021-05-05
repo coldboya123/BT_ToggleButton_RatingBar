@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     android:orientation="vertical"
-    tools:context=".MainActivity"
-    android:background="@color/background">
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:id="@+id/block"
@@ -19,8 +19,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textColor="@color/text_color"
             android:text="HEX # 0 0 0 0"
+            android:textColor="@color/text_color"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -70,19 +70,22 @@
         android:thumbTint="@color/blue" />
 
     <RatingBar
-        android:layout_gravity="center"
+        android:id="@+id/ratingbar"
         style="@style/customRatingBar"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:isIndicator="true"
+        android:numStars="5"/>
 
     <ToggleButton
         android:id="@+id/togglebutton"
-        android:background="@drawable/toggle_selector"
         android:layout_width="70dp"
         android:layout_height="30dp"
+        android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:textOff=""
-        android:textOn=""
+        android:background="@drawable/toggle_selector"
         android:checked="true"
-        android:layout_gravity="center"/>
+        android:textOff=""
+        android:textOn="" />
 </LinearLayout>

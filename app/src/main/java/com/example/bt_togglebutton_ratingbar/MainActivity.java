@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.CompoundButton;
 import android.widget.LinearLayout;
+import android.widget.RatingBar;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.ToggleButton;
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
     LinearLayout block;
     int a = 0, r = 0, b = 0, g = 0;
     ToggleButton toggleButton;
+    RatingBar ratingBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,8 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
         mSeekbarGreen.setOnSeekBarChangeListener(this);
         mSeekbarBlue.setOnSeekBarChangeListener(this);
 
+        ratingBar.setRating(3);
+
         toggleButton.setOnCheckedChangeListener(this);
 
     }
@@ -46,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
         txtRBG = findViewById(R.id.txtRBG);
         block = findViewById(R.id.block);
         toggleButton = findViewById(R.id.togglebutton);
+        ratingBar = findViewById(R.id.ratingbar);
     }
 
     @Override
